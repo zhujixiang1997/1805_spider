@@ -1,0 +1,1962 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>会员-列表-空姐网官方唯一交友频道</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="/tpl/static/layui/css/layui.css" />
+<link rel="stylesheet" href="/tpl/templets/v5/css/style.css" />
+<link rel="stylesheet" href="/tpl/static/varpop/css/oe_varpop.css" />
+<link rel="stylesheet" href="/tpl/static/varpop/css/box.css" />
+<script src="/tpl/static/js/jquery.min.js"></script>
+<script type='text/javascript'>
+var _ROOT_PATH = "/";
+var _OE_FILE = "/index.php";
+var _LOGIN_STATUS = "0"; //登录状态
+var _CONNET_LOGIN = 0;
+	_CONNET_LOGIN = 1;
+
+var INFOWIN_FLAG = "1";
+var INFOWIN_LOADTIME = "5";
+var INFOWIN_CLOSETIME = "10";
+var INFOWIN_LOOPTIME = "30";
+</script>
+<script src="/tpl/static/js/jquery.superslide.js"></script>
+<script src="/tpl/static/js/common.js"></script>
+<script src="/tpl/static/js/jquery.upload.js"></script>
+<script src="/tpl/static/js/jquery.placeholder.min.js"></script>
+<script src="/tpl/static/js/oelove.ajax.js"></script>
+<script src="/tpl/static/js/picker.area.js"></script>
+
+<script src="/tpl/static/varpop/oe_varpop.js"></script>
+<script src="/tpl/static/js/model.popdialog2.js"></script>
+<script src="/tpl/static/layui/layui.js"></script> 
+<meta name="author" content="OEdev" />
+<meta name="generator" content="OElove" />
+<!--[if lte IE 9]>  
+<script type="text/javascript">  
+$(function(){  
+    $('input[placeholder]').placeholder();
+    $('textarea[placeholder]').placeholder();  
+});  
+</script>  
+<![endif]-->
+
+<style type="text/css">
+.layui-btn{background:#14b5a0;}
+</style>
+</head>
+<body>
+<style type="text/css">
+/*导航菜单*/
+.oe_mu{background:#FE579C;}
+.oe_menu ul li a{color:#fff; }
+.oe_menu ul li.current a,.oe_menu ul li a:hover{background:#ebebeb; color:#333;}
+/* -----全局重写样式----- */
+.layui-form-radio > i:hover, .layui-form-radioed > i{color:#FE579C;}
+.layui-form-select dl dd.layui-this{background:#FE579C;}
+.layui-form-checked span, .layui-form-checked:hover span{background:#FE579C;}
+.layui-form-checked, .layui-form-checked:hover {border-color: #FE579C;}
+.layui-form-checked i, .layui-form-checked:hover i{color:#FE579C;}
+.layui-btn{background:#FE579C;}
+/*首页*/
+.layui-form-radio > i:hover, .layui-form-radioed > i{color:#FE579C;}
+.oe_index_newuser .bd ul li a{color:#FE579C;}
+.oe_indexusercon .bd dl dd p.p_3{color:#FE579C;}
+.oe_partycon .bd dl dd p.p_1 span a{color:#FE579C;}
+.oe_inzhenhun .rhd{background:#FE579C;}
+.oe_index_story .bd dl dd h3 a{color:#FE579C;}
+.oe_index_story .bd dl:hover dd{border-bottom:1px solid #FE579C;}
+.macon p.p_2 span{background:#FE579C;}
+.oe_index_sercon .bdd ul li.btn button{background:#FE579C;}
+.oe_banner .hd ul li.on span{background:#FE579C;}
+/*会员列表*/
+.layui-form-checked span, .layui-form-checked:hover span{background:#FE579C;}
+.layui-form-checked, .layui-form-checked:hover {border-color: #FE579C;}
+.layui-form-checked i, .layui-form-checked:hover i{color:#FE579C;}
+.oe_searchcon button.btn{background:#FE579C;}
+.oe_user_list dl dd.dd_2 span{border:1px solid #FE579C; color:#FE579C;}
+.oe_user_list dl dd.dd_2 span{d border:1px solid #FE579C; color:#FE579C;}
+.oe_user_list dl dd.dd_2 label{ background:#FE579C; border:1px solid #FE579C;}
+.oe_page a._current,.oe_page a:hover{background:#FE579C; border:1px solid #FE579C;}
+.oe_searchcon .selectmore .selectbd p label{background:#FE579C;}
+/*会员主页*/
+.oe_home_user .hd .tips a{color:#FE579C;}
+.oe_home_user .hd .no_photo span{color:#FE579C; }
+.oe_home_userinfo .divinfo span{color:#FE579C;}
+.oe_home_userinfo .userrz h4{color:#FE579C;}
+.oe_home_userinfo .userrz ul li{ color:#FE579C;}
+.oe_home_userinfo .userrz ul li a{color:#FE579C;}
+.home_btn span{background:#FE579C;}
+.oe_home_info dl dd ul li label{color:#FE579C;}
+/*日记列表*/
+.layui-btn{background:#FE579C;}
+/*日记详情*/
+.oe_comment h2 a{background:#FE579C;}
+/*活动列表+详情*/
+.oe_parea .oe_pareacon p label{background:#FE579C;}
+.oe_party_type ul li em{border-bottom:3px solid #FE579C;}
+.oe_party_detail dl.head dd.dd_2 p.p_2{ color:#FE579C;}
+.oe_party_detail dl.head dd.dd_1 ul li.btn span{background:#FE579C;}
+.oe_party_detail dl.head dd.dd_1 ul li em{color:#FE579C;}
+.detail_bm_user dl dt span em{color:#FE579C;}
+.partydetail_content .righttips dl dt span{background:#FE579C;}
+.oe_party_type ul li i{ border-color: #FE579C transparent transparent; }
+.oe_party_detail dl.head dd.dd_2 h3{background:#FE579C;}
+/*征婚*/
+.oe_marry_search .sex span.span_1{border:1px solid #FE579C; border-right:0px; border-radius:40px 0px 0px 40px;}
+.oe_marry_search .sex span.span_2{border:1px solid #FE579C; border-left:0px; border-radius:0px 40px 40px 0px;}
+.oe_marry_search .sex span.current{background:#FE579C; color:#fff;}
+.oe_marry_detail .left .des span{color:#FE579C;}
+.oe_marry_detail .left dl.head dd p.p_2{color:#FE579C;}
+.oe_marry_detail .left .bmbtn label{ background:#FE579C;  border:1px solid #FE579C;}
+.oe_marry_detail .left .bmbtn span{border:1px solid #FE579C; color:#FE579C;}
+.oe_marry_detail .marry_marryright .hd ul li.current{border:1px solid #FE579C;}
+.oe_newmarrylist .hd{ color:#FE579C;}
+.oe_newmarrylist .hd label{ border-bottom:2px solid #FE579C;}
+.oe_marrytips .hd{color:#FE579C;}
+.oe_marrytips .hd label{ border-bottom:2px solid #FE579C;}
+/*案例*/
+.oe_story dl dd p.p_5{color:#FE579C;}
+.oe_comment h2 span{ background:#FE579C;}
+/*动态*/
+.oe_dynamic_content dl dd label.send{border:1px solid #FE579C; color:#FE579C;}
+.oe_dynamic_content dl dd label.send:hover{background:#FE579C;}
+.oe_dynamic_content dl dd.dd_2 h3 span{ background:#FE579C;}
+.oe_dynamic .right .dynamic_fabiao span{background:#FE579C;}
+.dynamic_search .layui-btn{color:#FE579C;border:1px solid #FE579C;}
+.dynamic_user dl dd p.p_1 label.label_1{background:#FE579C;}
+.dynamic_user dl dd p.p_1 label{ color:#FE579C;}
+.dynamic_user dl dd p.p_1 label{border:1px solid #FE579C;}
+.dynamic_user dl dd p.p_1 label a{color:#FE579C;}
+.oe_dynamic_add dl.mar_dl dd button.layui-btn{background:#FE579C;}
+.oe_dynamic_content dl dd label.send a{color: #FE579C;}
+.dynamic_rank ul li.current a{color: #FE579C;}
+.dynamic_rank ul li.current{border:1px solid #FE579C;}
+.dynamic_rank ul li.current{border:1px solid #FE579C; border-bottom:2px solid #fff; font-weight:bold;}
+.oe_dynamic_content dl dd.dd_1 p.p_1 span{color:#FE579C}
+/*防骗中心*/
+.ser_top dl dt span.current{background:#FE579C; }
+.ser_top dl dd input{border:1px solid #FE579C; }
+.ser_top dl dd button.layui-btn{ background:#FE579C; }
+.oe_safety_r1 .bd p.p_3{color:#FE579C;}
+.oe_safety_index .left .hd ul li.current{ border-bottom:2px solid #FE579C; color:#FE579C;}
+.oe_safety_index .left .hd ul li.current a{color:#FE579C;}
+.oe_safety_index .right .layui-btn{ background:#FE579C;}
+/*媒婆圈专题*/
+.mp_banner .hd ul li.on span{background:#FE579C;}
+.mp_banner .mp_ft a{background:#FE579C; }
+/*留言反馈/弹窗*/
+.feedback_box dl dd label.current{background:#FE579C; border:1px solid #FE579C;}
+div.message_tips .hd{background: #FE579C;}
+div.message_tips .bd div.img p span.btn {background: #FE579C;}
+.oe_user_add dl dd label.current{background:#FE579C; border:1px solid #FE579C;}
+.oe_user_add dl.mar_dl dd button.layui-btn{background: #FE579C;}
+.oe_user_add dl.mar_dl dd button.layui-btn{background: #FE579C;}
+/*资讯文章*/
+.oe_article_cats .bd a:hover{color:#FE579C;}
+.oe_article_list .left dl dd h3 span{color:#FE579C;}
+.oe_article_cats .bd a.current{color:#FE579C;}
+.oe_article_cats .hd span{border-bottom:2px solid #FE579C;}
+</style>
+
+ 
+<style type="text/css">
+  body{background:#f5f5f5;}
+</style> 
+<div class="oe_topcon addcurrent">
+  <div class="oe_topcontent">
+    <div class="oe_logo">
+      <a href="http://www.91kongjie.com/"><img class="logo" alt="空姐网官方唯一交友频道" title="会员-列表-空姐网官方唯一交友频道" src="/data/attachment/upload/201704/26/2a4975bca5a656c9.png" /></a><img class="line" src="/tpl/templets/v5/images/line.png"/>
+    </div>
+    <div class="oe_toparea" style="display:none;">
+      <dl>
+        <dt f="but_open_citybox">
+        <i class="icon"></i>
+        <span>
+                    全国
+                  </span>
+        <em></em>
+      </dt>
+        <dd>
+          <ul>
+                                    <li>
+            <span>华北东北</span>
+                                    <div class="clear"></div>
+            </li>
+                        <li>
+            <span>华东地区</span>
+                                    <div class="clear"></div>
+            </li>
+                        <li>
+            <span>中部西部</span>
+                                    <div class="clear"></div>
+            </li>
+                        <li>
+            <span>华南地区</span>
+                                    <div class="clear"></div>
+            </li>
+                      </ul>
+          <div class="btn"> <a href="/index.php?c=city">全部城市</a> </div>
+        </dd>
+      </dl>
+    </div>
+    
+    <div class="oe_topright drop">
+            <a href="javascript:;" f="pop2_jdlogin"  class="a_1" rel="nofollow">登录</a>
+      <a href="/index.php?c=passport&a=reg" class="a_1" rel="nofollow">注册</a>
+            
+            <dl class="down">
+        <dt><i class="icon"></i>手机版</dt>
+        <dd class="sub">
+          <img src="/data/attachment/upload/201705/20/e98109d451c61e73.png" width="150px" />
+        </dd>
+      </dl>
+            
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div class="oe_top">
+  <div class="oe_mu">
+    <div class="oe_menu">
+      <ul>
+        <li><a href="/index.php">首页</a></li>
+                <li class='current'><a href="/index.php?c=user">会员</a></li>
+                
+        
+        
+                <li><a href="/index.php?c=marry">征婚</a></li>
+                
+        
+        <li><a href="/index.php?c=diary">日记</a></li>
+        <li><a href="/index.php?c=dynamic">动态</a></li>
+                      
+                                        <li><a href="http://www.kongjie.com" >空姐网</a></li>
+		<li><a href="http://www.minhang.com" >民航网</a></li>
+                      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    //分站选择...
+    $(document).on("click", "[f='but_open_citybox']", function(){
+        if ($(this).parent().hasClass("current")) {
+            $(this).parent().removeClass("current");
+        }
+        else {
+            $(this).parent().addClass("current");
+        }
+    });
+});
+</script>
+
+ 
+<script type='text/javascript'>
+var _ADVSER_POWER = "0";
+</script>
+<div class="oe_nav">
+  当前位置：首页 / 会员
+</div>
+
+<div class="oe_main">
+  <div class="oe_userlist">
+    <div class="oe_usersearch">
+      
+  <form id="user_search_form" class="layui-form" action="/index.php?c=user&a=list" method="post">
+  
+  <input type="hidden" name="s_orderby" id="s_orderby" value="0" />
+  <div class="oe_searchcon">
+    <div class="layui-form-item">
+    
+      <label class="layui-form-label">年龄</label>
+      <div class="layui-input-inline select_88">
+                <select name="s_age1" id="s_age1">
+        <option value="">不限</option>
+         
+        <option value="18">18岁</option>
+         
+        <option value="19">19岁</option>
+         
+        <option value="20">20岁</option>
+         
+        <option value="21">21岁</option>
+         
+        <option value="22">22岁</option>
+         
+        <option value="23">23岁</option>
+         
+        <option value="24">24岁</option>
+         
+        <option value="25">25岁</option>
+         
+        <option value="26">26岁</option>
+         
+        <option value="27">27岁</option>
+         
+        <option value="28">28岁</option>
+         
+        <option value="29">29岁</option>
+         
+        <option value="30">30岁</option>
+         
+        <option value="31">31岁</option>
+         
+        <option value="32">32岁</option>
+         
+        <option value="33">33岁</option>
+         
+        <option value="34">34岁</option>
+         
+        <option value="35">35岁</option>
+         
+        <option value="36">36岁</option>
+         
+        <option value="37">37岁</option>
+         
+        <option value="38">38岁</option>
+         
+        <option value="39">39岁</option>
+         
+        <option value="40">40岁</option>
+         
+        <option value="41">41岁</option>
+         
+        <option value="42">42岁</option>
+         
+        <option value="43">43岁</option>
+         
+        <option value="44">44岁</option>
+         
+        <option value="45">45岁</option>
+         
+        <option value="46">46岁</option>
+         
+        <option value="47">47岁</option>
+         
+        <option value="48">48岁</option>
+         
+        <option value="49">49岁</option>
+         
+        <option value="50">50岁</option>
+         
+        <option value="51">51岁</option>
+         
+        <option value="52">52岁</option>
+         
+        <option value="53">53岁</option>
+         
+        <option value="54">54岁</option>
+         
+        <option value="55">55岁</option>
+         
+        <option value="56">56岁</option>
+         
+        <option value="57">57岁</option>
+         
+        <option value="58">58岁</option>
+         
+        <option value="59">59岁</option>
+         
+        <option value="60">60岁</option>
+         
+        <option value="61">61岁</option>
+         
+        <option value="62">62岁</option>
+         
+        <option value="63">63岁</option>
+         
+        <option value="64">64岁</option>
+         
+        <option value="65">65岁</option>
+         
+        <option value="66">66岁</option>
+         
+        <option value="67">67岁</option>
+         
+        <option value="68">68岁</option>
+         
+        <option value="69">69岁</option>
+         
+        <option value="70">70岁</option>
+         
+        <option value="71">71岁</option>
+         
+        <option value="72">72岁</option>
+         
+        <option value="73">73岁</option>
+         
+        <option value="74">74岁</option>
+         
+        <option value="75">75岁</option>
+         
+        <option value="76">76岁</option>
+         
+        <option value="77">77岁</option>
+         
+        <option value="78">78岁</option>
+         
+        <option value="79">79岁</option>
+         
+        <option value="80">80岁</option>
+                </select>
+      </div>
+      
+      <label class="layui-form-labels">-</label>
+      <div class="layui-input-inline select_88">
+                <select name="s_age2" id="s_age2">
+          <option value="">不限</option>
+           
+          <option value="18">18岁</option>
+           
+          <option value="19">19岁</option>
+           
+          <option value="20">20岁</option>
+           
+          <option value="21">21岁</option>
+           
+          <option value="22">22岁</option>
+           
+          <option value="23">23岁</option>
+           
+          <option value="24">24岁</option>
+           
+          <option value="25">25岁</option>
+           
+          <option value="26">26岁</option>
+           
+          <option value="27">27岁</option>
+           
+          <option value="28">28岁</option>
+           
+          <option value="29">29岁</option>
+           
+          <option value="30">30岁</option>
+           
+          <option value="31">31岁</option>
+           
+          <option value="32">32岁</option>
+           
+          <option value="33">33岁</option>
+           
+          <option value="34">34岁</option>
+           
+          <option value="35">35岁</option>
+           
+          <option value="36">36岁</option>
+           
+          <option value="37">37岁</option>
+           
+          <option value="38">38岁</option>
+           
+          <option value="39">39岁</option>
+           
+          <option value="40">40岁</option>
+           
+          <option value="41">41岁</option>
+           
+          <option value="42">42岁</option>
+           
+          <option value="43">43岁</option>
+           
+          <option value="44">44岁</option>
+           
+          <option value="45">45岁</option>
+           
+          <option value="46">46岁</option>
+           
+          <option value="47">47岁</option>
+           
+          <option value="48">48岁</option>
+           
+          <option value="49">49岁</option>
+           
+          <option value="50">50岁</option>
+           
+          <option value="51">51岁</option>
+           
+          <option value="52">52岁</option>
+           
+          <option value="53">53岁</option>
+           
+          <option value="54">54岁</option>
+           
+          <option value="55">55岁</option>
+           
+          <option value="56">56岁</option>
+           
+          <option value="57">57岁</option>
+           
+          <option value="58">58岁</option>
+           
+          <option value="59">59岁</option>
+           
+          <option value="60">60岁</option>
+           
+          <option value="61">61岁</option>
+           
+          <option value="62">62岁</option>
+           
+          <option value="63">63岁</option>
+           
+          <option value="64">64岁</option>
+           
+          <option value="65">65岁</option>
+           
+          <option value="66">66岁</option>
+           
+          <option value="67">67岁</option>
+           
+          <option value="68">68岁</option>
+           
+          <option value="69">69岁</option>
+           
+          <option value="70">70岁</option>
+           
+          <option value="71">71岁</option>
+           
+          <option value="72">72岁</option>
+           
+          <option value="73">73岁</option>
+           
+          <option value="74">74岁</option>
+           
+          <option value="75">75岁</option>
+           
+          <option value="76">76岁</option>
+           
+          <option value="77">77岁</option>
+           
+          <option value="78">78岁</option>
+           
+          <option value="79">79岁</option>
+           
+          <option value="80">80岁</option>
+                  </select>
+      </div>
+      
+      <div class="layui-input-inline select_78 ml">
+        <select name="s_gender" id="s_gender">
+          <option value="">性别</option>
+          <option value="2">女会员</option>
+          <option value="1">男会员</option>
+        </select>
+      </div>
+      
+      <div class="selectmore layui-form-select">
+        <span class="text" id="s_dist_text">
+           
+          <font color="#999">所在地区</font>
+           
+          <i class="layui-edge"></i>
+        </span>
+        
+        <div class="selectbd" style="width:160px;display:none;" id="selarea_box">
+                    <select name="s_dist1" id="s_dist1" lay-filter="area" data-depth="1" data-name="s_dist" data-text="请选择">
+            <option value="">请选择</option>
+                        <option value="1">北京</option>
+                        <option value="5">上海</option>
+                        <option value="3">天津</option>
+                        <option value="7">重庆</option>
+                        <option value="9">广东</option>
+                        <option value="85">福建</option>
+                        <option value="337">海南</option>
+                        <option value="233">四川</option>
+                        <option value="33">江苏</option>
+                        <option value="84">浙江</option>
+                        <option value="156">山东</option>
+                        <option value="306">河北</option>
+                        <option value="126">湖北</option>
+                        <option value="102">湖南</option>
+                        <option value="366">山西</option>
+                        <option value="345">河南</option>
+                        <option value="218">云南</option>
+                        <option value="177">辽宁</option>
+                        <option value="198">吉林</option>
+                        <option value="286">黑龙江</option>
+                        <option value="252">安徽</option>
+                        <option value="271">江西</option>
+                        <option value="392">广西</option>
+                        <option value="405">贵州</option>
+                        <option value="329">陕西</option>
+                        <option value="449">甘肃</option>
+                        <option value="416">宁夏</option>
+                        <option value="421">青海</option>
+                        <option value="374">内蒙古</option>
+                        <option value="445">西藏</option>
+                        <option value="427">新疆</option>
+                        <option value="476">其他</option>
+                      </select>
+          
+          <b id="json_s_dist2" style="font-weight:normal;"> 
+                        <select name="s_dist2" id="s_dist2" lay-filter="area">
+              <option value="">请选择</option>
+            </select>
+             
+          </b>
+          <b id="json_s_dist3" style="font-weight:normal;"> 
+                        <select name="s_dist3" id="s_dist3" lay-filter="area">
+              <option value="">请选择</option>
+            </select>
+             
+          </b>
+          <p><label class="layui-btn layui-btn-lg oe_passport_btn" f="but_sel_area">确定</label></p>
+        </div>
+      </div>
+      
+      <div class="layui-input-inline select_68 ml">
+                <select name="s_marry" id="s_marry">
+          <option value="">婚况</option>
+           
+          <option value="1">未婚</option>
+           
+          <option value="2">已婚</option>
+           
+          <option value="3">离异</option>
+           
+          <option value="4">丧偶</option>
+                  </select>
+      </div>
+      
+      <div class="layui-input-inline select_88 ml">
+                <select name="s_astro" id="s_astro">
+          <option value="">星座</option>
+           
+          <option value="1">白羊座</option>
+           
+          <option value="2">金牛座</option>
+           
+          <option value="3">双子座</option>
+           
+          <option value="4">巨蟹座</option>
+           
+          <option value="5">狮子座</option>
+           
+          <option value="6">处女座</option>
+           
+          <option value="7">天秤座</option>
+           
+          <option value="8">天蝎座</option>
+           
+          <option value="9">射手座</option>
+           
+          <option value="10">摩羯座</option>
+           
+          <option value="11">水瓶座</option>
+           
+          <option value="12">双鱼座</option>
+                  </select>
+      </div>
+      <div class="clear"></div>
+      
+      <label class="layui-form-label">身高</label>
+      <div class="layui-input-inline select_88">
+                <select name="s_height1" id="s_height1">
+          <option value="">不限</option>
+           
+          <option value="158">158CM</option>
+           
+          <option value="159">159CM</option>
+           
+          <option value="160">160CM</option>
+           
+          <option value="161">161CM</option>
+           
+          <option value="162">162CM</option>
+           
+          <option value="163">163CM</option>
+           
+          <option value="164">164CM</option>
+           
+          <option value="165">165CM</option>
+           
+          <option value="166">166CM</option>
+           
+          <option value="167">167CM</option>
+           
+          <option value="168">168CM</option>
+           
+          <option value="169">169CM</option>
+           
+          <option value="170">170CM</option>
+           
+          <option value="171">171CM</option>
+           
+          <option value="172">172CM</option>
+           
+          <option value="173">173CM</option>
+           
+          <option value="174">174CM</option>
+           
+          <option value="175">175CM</option>
+           
+          <option value="176">176CM</option>
+           
+          <option value="177">177CM</option>
+           
+          <option value="178">178CM</option>
+           
+          <option value="179">179CM</option>
+           
+          <option value="180">180CM</option>
+           
+          <option value="181">181CM</option>
+           
+          <option value="182">182CM</option>
+           
+          <option value="183">183CM</option>
+           
+          <option value="184">184CM</option>
+           
+          <option value="185">185CM</option>
+           
+          <option value="186">186CM</option>
+           
+          <option value="187">187CM</option>
+           
+          <option value="188">188CM</option>
+           
+          <option value="189">189CM</option>
+           
+          <option value="190">190CM</option>
+                  </select>
+      </div>
+      
+      <label class="layui-form-labels">-</label>
+      <div class="layui-input-inline select_88">
+                <select name="s_height2" id="s_height2">
+          <option value="">不限</option>
+           
+          <option value="158">158CM</option>
+           
+          <option value="159">159CM</option>
+           
+          <option value="160">160CM</option>
+           
+          <option value="161">161CM</option>
+           
+          <option value="162">162CM</option>
+           
+          <option value="163">163CM</option>
+           
+          <option value="164">164CM</option>
+           
+          <option value="165">165CM</option>
+           
+          <option value="166">166CM</option>
+           
+          <option value="167">167CM</option>
+           
+          <option value="168">168CM</option>
+           
+          <option value="169">169CM</option>
+           
+          <option value="170">170CM</option>
+           
+          <option value="171">171CM</option>
+           
+          <option value="172">172CM</option>
+           
+          <option value="173">173CM</option>
+           
+          <option value="174">174CM</option>
+           
+          <option value="175">175CM</option>
+           
+          <option value="176">176CM</option>
+           
+          <option value="177">177CM</option>
+           
+          <option value="178">178CM</option>
+           
+          <option value="179">179CM</option>
+           
+          <option value="180">180CM</option>
+           
+          <option value="181">181CM</option>
+           
+          <option value="182">182CM</option>
+           
+          <option value="183">183CM</option>
+           
+          <option value="184">184CM</option>
+           
+          <option value="185">185CM</option>
+           
+          <option value="186">186CM</option>
+           
+          <option value="187">187CM</option>
+           
+          <option value="188">188CM</option>
+           
+          <option value="189">189CM</option>
+           
+          <option value="190">190CM</option>
+                  </select>
+      </div>
+      
+      <div class="layui-input-inline select_88 ml">
+                <select name="s_job" id="s_job">
+          <option value="">职业</option>
+           
+          <option value="1">飞行员</option>
+           
+          <option value="2">空乘</option>
+           
+          <option value="3">空管</option>
+           
+          <option value="4">地服</option>
+           
+          <option value="5">机务</option>
+           
+          <option value="6">安检</option>
+           
+          <option value="7">签派</option>
+           
+          <option value="8">海关</option>
+           
+          <option value="9">自由职业</option>
+           
+          <option value="10">教师</option>
+           
+          <option value="11">教授</option>
+           
+          <option value="12">总经理</option>
+           
+          <option value="13">部门经理</option>
+           
+          <option value="14">高级干部</option>
+           
+          <option value="15">公务员</option>
+           
+          <option value="16">律师</option>
+           
+          <option value="17">医生</option>
+           
+          <option value="18">护士</option>
+           
+          <option value="19">专家学者</option>
+           
+          <option value="20">工程师</option>
+           
+          <option value="21">设计师</option>
+           
+          <option value="22">艺术家</option>
+           
+          <option value="23">演员</option>
+           
+          <option value="24">模特</option>
+           
+          <option value="25">技术员</option>
+           
+          <option value="26">其他</option>
+                  </select>
+      </div>
+      
+      <div class="layui-input-inline select_88 ml">
+                <select name="s_education" id="s_education">
+          <option value="">学历</option>
+           
+          <option value="1">中专以下</option>
+           
+          <option value="2">中专</option>
+           
+          <option value="3">大专</option>
+           
+          <option value="4">本科</option>
+           
+          <option value="5">硕士</option>
+           
+          <option value="6">博士</option>
+           
+          <option value="7">博士后</option>
+                  </select>
+      </div>
+
+      <div class="layui-input-inline select_250 ml">
+        <div>
+          <input type="hidden" name="s_avatar" id="s_avatar" value="1" />
+          <input type="checkbox" name="form_s_avatar" id="form_s_avatar" lay-filter="seravatar" title="有照片" value="1" checked />
+        </div>
+      </div>
+      
+    </div>
+    <button class="layui-btn btn" lay-submit lay-filter="userserform">筛选<span class="oe_btn_loading layui-anim layui-icon layui-anim-rotate layui-anim-loop" style="display:none;">&#xe63d;</span></button>
+  </div>
+  </form>
+
+</div>
+
+
+    <div class="oe_user_list">
+      <div class="oe_rank">
+        <ul>
+          <li f="but_ser_orderby" data-val="0" class="current">最新注册</li>
+          <li f="but_ser_orderby" data-val="1">会员等级</li>
+          <li f="but_ser_orderby" data-val="2">人气指数</li>
+          <li f="but_ser_orderby" data-val="3">认证会员</li>
+          <li f="but_ser_orderby" data-val="5" style="border-right:none;">最新登录</li>
+        </ul>
+        <div class="clear"></div>
+        <span class="setmap" style="display:none;"><i class="iconfont"></i>标注位置</span>
+      </div>
+            
+      
+       
+       
+            
+                         
+                    
+       
+       
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=41915" target="_blank"><img class="headimg" src="/data/attachment/avatar/201808/27/41915/avatar_big.jpg.thumb.jpg" /></a>
+          <span class="ico"><i></i>排名靠前</span>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=41915" target="_blank">hellowang</a> 
+                          <span class="vip"><img src='/data/attachment/upload/201110/22/9e181f1415df9847.gif' /></span>
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            浙江 
+            杭州 
+            &#12288;
+            28岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            174CM 
+             
+            &#12288;
+             
+            -- 
+             
+          </p>
+          <p class="p_2">
+                        幻象中批驳实在，异色中解构灰蓝；尘世中的的艳与寂，归与离，随流光掠过，随来去无碍，云衣淡卷，此心悠然。前世佳缘，遗留印记
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=41915" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_send_msg" data-touid="41915" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=43266" target="_blank"><img class="headimg" src="/data/attachment/avatar/201803/29/43266/avatar_big.jpg.thumb.jpg" /></a>
+          <span class="ico"><i></i>排名靠前</span>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=43266" target="_blank">宋诵颂</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            四川 
+            成都市 
+            &#12288;
+            23岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            160CM 
+             
+            &#12288;
+             
+            -- 
+             
+          </p>
+          <p class="p_2">
+                        这个世界上，总有一个人在等你，总有一个人会给你安心的幸福，总有一个人会陪你到老，这个人，要珍惜，要感恩。你是我要找的幸福
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=43266" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_send_msg" data-touid="43266" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=43566" target="_blank"><img class="headimg" src="/data/attachment/avatar/201806/04/43566/avatar_big.jpg.thumb.jpg" /></a>
+          <span class="ico"><i></i>排名靠前</span>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=43566" target="_blank">wzy0907</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            海南 
+            海口 
+            &#12288;
+            22岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            171CM 
+             
+            &#12288;
+             
+            -- 
+             
+          </p>
+          <p class="p_2">
+                        不要因为寂寞爱错人，更不要因为爱错人而寂寞一生，尝试信任才能得到幸福。缘分是本书，翻的不经意会错过，读的太认真会流泪。
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=43566" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_send_msg" data-touid="43566" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=43993" target="_blank"><img class="headimg" src="/data/attachment/avatar/201807/24/43993/avatar_big.jpg.thumb.jpg" /></a>
+          <span class="ico"><i></i>排名靠前</span>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=43993" target="_blank">卢佳欣</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            河北 
+            廊坊 
+            &#12288;
+            19岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            168CM 
+             
+            &#12288;
+             
+            -- 
+             
+          </p>
+          <p class="p_2">
+                        ...
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=43993" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_send_msg" data-touid="43993" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            
+      
+      
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44528" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/14/44528/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44528" target="_blank">Bore0365</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            广东 
+            深圳市 
+            &#12288;
+            37岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            164CM 
+             
+            &#12288;
+             
+            双鱼座 
+             
+          </p>
+          <p class="p_2">
+                        其实，你喜欢一个人，就像喜欢富士山。你可以看到它，但是不能搬走它。你有什么方法可以移动一座富士山呢？回答是，你自己走过去
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44528" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44528" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44527" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/13/44527/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44527" target="_blank">BOSS9</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            上海 
+            黄浦区 
+            &#12288;
+            35岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            162CM 
+             
+            &#12288;
+             
+            狮子座 
+             
+          </p>
+          <p class="p_2">
+                        不要觉得自己的过去受到了很深的伤害，从此就不敢也没有能力再爱。这世界上有那么多的人，每一个人的人生都是不同的，发生在他们
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44527" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44527" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44526" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/11/44526/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44526" target="_blank">lovingcc</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            上海 
+            长宁区 
+            &#12288;
+            31岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            176CM 
+             
+            &#12288;
+             
+            金牛座 
+             
+          </p>
+          <p class="p_2">
+                        人生的浮云总会遮断望眼，荆棘总会绊住双脚，斗志总会被曲折消磨，我早已在这个熟悉的城市遗失了一颗感恩的心。却在你出现时重拾
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44526" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44526" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44523" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/09/44523/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44523" target="_blank">zhougy</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            湖北 
+            武汉 
+            &#12288;
+            22岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            171CM 
+             
+            &#12288;
+             
+            双子座 
+             
+          </p>
+          <p class="p_2">
+                        上天也许早已安排我们遇见，指引我历尽千山万水来到你身边，在我们终于遇见心仪的人时，便应当心存感激。我在这里等着一份缘定的
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44523" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44523" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44518" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/07/44518/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44518" target="_blank">SOUL’</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            福建 
+            福州 
+            &#12288;
+            23岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            178CM 
+             
+            &#12288;
+             
+            处女座 
+             
+          </p>
+          <p class="p_2">
+                        其实，你喜欢一个人，就像喜欢富士山。你可以看到它，但是不能搬走它。你有什么方法可以移动一座富士山呢？回答是，你自己走过去
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44518" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44518" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44517" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/06/44517/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44517" target="_blank">quanshui191</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            上海 
+            杨浦区 
+            &#12288;
+            34岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            179CM 
+             
+            &#12288;
+             
+            水瓶座 
+             
+          </p>
+          <p class="p_2">
+                        想谈一场恋爱，想有个家
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44517" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44517" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44516" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/06/44516/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44516" target="_blank">Last-Minute Love</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            北京 
+            朝阳区 
+            &#12288;
+            27岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            180CM 
+             
+            &#12288;
+             
+            双鱼座 
+             
+          </p>
+          <p class="p_2">
+                        你的世界，是我忘记旋律的一首歌；我的寂寞，却哭不出声响。你的苍桑，路遇我的繁华凄凉，我反复吟唱，却成了年华无法停驻的忧伤
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44516" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44516" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44514" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/05/44514/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44514" target="_blank">小菠萝</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            内蒙古 
+            通辽 
+            &#12288;
+            22岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            176CM 
+             
+            &#12288;
+             
+            巨蟹座 
+             
+          </p>
+          <p class="p_2">
+                        幻象中批驳实在，异色中解构灰蓝；尘世中的的艳与寂，归与离，随流光掠过，随来去无碍，云衣淡卷，此心悠然。前世佳缘，遗留印记
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44514" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44514" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44510" target="_blank"><img class="headimg" src="/data/attachment/avatar/2018/12/04/wx_44510.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44510" target="_blank">中澤</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            陕西 
+            西安 
+            &#12288;
+            29岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            172CM 
+             
+            &#12288;
+             
+            水瓶座 
+             
+          </p>
+          <p class="p_2">
+                        不要太在乎一些无伤大雅的细节，有时候放开一些反而会让你得到更多。不拘小节的人容易得到快乐，和不拘小节的人一起生活是一个轻
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44510" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44510" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44509" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/04/44509/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44509" target="_blank">超级无敌负责的r</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            湖北 
+            武汉 
+            &#12288;
+            24岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            170CM 
+             
+            &#12288;
+             
+            天秤座 
+             
+          </p>
+          <p class="p_2">
+                        不要觉得自己的过去受到了很深的伤害，从此就不敢也没有能力再爱。这世界上有那么多的人，每一个人的人生都是不同的，发生在他们
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44509" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44509" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44508" target="_blank"><img class="headimg" src="/data/attachment/avatar/2018/12/03/wx_44508.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44508" target="_blank">均恒</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            广东 
+            深圳市 
+            &#12288;
+            23岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            174CM 
+             
+            &#12288;
+             
+            狮子座 
+             
+          </p>
+          <p class="p_2">
+                        三十六线歌手吉他手键盘手
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44508" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44508" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44507" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/02/44507/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44507" target="_blank">Pinkman0</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            北京 
+            朝阳区 
+            &#12288;
+            28岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            183CM 
+             
+            &#12288;
+             
+            巨蟹座 
+             
+          </p>
+          <p class="p_2">
+                        广州户口，在广州有房。奔驰车。学历:对外经济贸易大学金融硕士（全国排名前三）周边朋友都是企业主，投行家，银行高管，注册会
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44507" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44507" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44504" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/02/44504/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44504" target="_blank">于某某</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            吉林 
+            长春 
+            &#12288;
+            23岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            179CM 
+             
+            &#12288;
+             
+            天秤座 
+             
+          </p>
+          <p class="p_2">
+                        不是每个擦肩而过的人都会相识，也不是每个相识的人都会让人牵挂。至少我们在今生，在那个地方，在一转身的时候没有错过。在我们
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44504" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44504" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44501" target="_blank"><img class="headimg" src="/data/attachment/avatar/201812/01/44501/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44501" target="_blank">欧阳鸿祎</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            北京 
+            朝阳区 
+            &#12288;
+            28岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            162CM 
+             
+            &#12288;
+             
+            处女座 
+             
+          </p>
+          <p class="p_2">
+                        对整个世界来说，你是一个人，而对一个人来说，你就是整个世界。我会在这里等着你的到来，期待我们的爱情开花结果，期待把我们的
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44501" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44501" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44499" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/30/44499/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44499" target="_blank">晨涧霖</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            广东 
+            深圳市 
+            &#12288;
+            27岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            180CM 
+             
+            &#12288;
+             
+            射手座 
+             
+          </p>
+          <p class="p_2">
+                        岁月在流逝，只想找个和我相携一生的伴侣，那是最美的风景：一杯浓浓的咖啡，露台上的两把藤椅上两个慢慢老去的爱人，迟暮但安详
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44499" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44499" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44495" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/24/44495/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44495" target="_blank">维戴</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            福建 
+            厦门 
+            &#12288;
+            19岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            177CM 
+             
+            &#12288;
+             
+            双子座 
+             
+          </p>
+          <p class="p_2">
+                        高情商、专一、直男，也喜欢高情商
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44495" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44495" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44494" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/24/44494/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44494" target="_blank">Vhou0373</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            河南 
+            新乡 
+            &#12288;
+            26岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            160CM 
+             
+            &#12288;
+             
+            白羊座 
+             
+          </p>
+          <p class="p_2">
+                        我期待这样的你：这一生任何时候你都一直紧紧的牵住我的手让我相信天长地久。当我白发苍苍躺在你怀里 ，将合上双眸的时候，你愿
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44494" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44494" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44491" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/23/44491/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44491" target="_blank">bingbing</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            辽宁 
+            鞍山 
+            &#12288;
+            42岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            163CM 
+             
+            &#12288;
+             
+            双鱼座 
+             
+          </p>
+          <p class="p_2">
+                        我的爱情不要暧昧，不要游戏，不要借口，不要谎言，不要灰色地带，不要挖空心思，不要不见天日，不要拖泥带水，不要顾左右而言他
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44491" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44491" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44484" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/20/44484/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44484" target="_blank">火武先生</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            北京 
+            海淀区 
+            &#12288;
+            31岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            162CM 
+             
+            &#12288;
+             
+            处女座 
+             
+          </p>
+          <p class="p_2">
+                        我天生喜欢交朋友，不为儿女私情而来。哈哈哈。信得过在下的请加微信聊天。
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44484" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44484" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <dl>
+        <dt>
+          <a href="/index.php?c=home&a=detail&id=44480" target="_blank"><img class="headimg" src="/data/attachment/avatar/201811/16/44480/avatar_big.jpg.thumb.jpg" /></a>
+        </dt>
+        <dd class="dd_1">
+          <h3> <a href="/index.php?c=home&a=detail&id=44480" target="_blank">萌萌哒的帅男</a> 
+                                    
+               
+          </h3>
+          <p class="p_1"> 
+            广东 
+            广州市 
+            &#12288;
+            26岁 
+            &#12288;
+             
+            未婚 
+             
+            &#12288;
+             
+            &#12288;
+            181CM 
+             
+            &#12288;
+             
+            双子座 
+             
+          </p>
+          <p class="p_2">
+                        其实，你喜欢一个人，就像喜欢富士山。你可以看到它，但是不能搬走它。你有什么方法可以移动一座富士山呢？回答是，你自己走过去
+                      </p>
+        </dd>
+        <dd class="dd_2">
+          <a href="/index.php?c=home&a=detail&id=44480" target="_blank" rel="nofollow"><span><i class="icon"></i>加好友</span></a>
+          <label f="pop_jdchat" data-touid="44480" data-loginstatus="0"><i class="icon"></i>发私信</label>
+        </dd>
+        <div class="clear"></div>
+      </dl>
+            <div class="clear"></div>
+            
+       
+            <div class="oe_page"><a class='_current' title='第1页'>1</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=2' title='第2页'>2</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=3' title='第3页'>3</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=4' title='第4页'>4</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=5' title='第5页'>5</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=6' title='第6页'>6</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=7' title='第7页'>7</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=8' title='第8页'>8</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=9' title='第9页'>9</a><a href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=10' title='第10页'>10</a><a title='下一页' href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=2'>下一页</a><a title='末页' href='/index.php?c=user&a=list&s_uid=0&s_dist1=0&s_dist2=0&s_dist3=0&s_dist4=0&s_gender=0&s_age1=0&s_age2=0&s_height1=0&s_height2=0&s_weight1=0&s_weight2=0&s_marry=0&s_education=0&s_avatar=1&s_sort=0&s_job=0&s_salary=0&s_lunar=0&s_astro=0&s_child=0&s_house=0&s_car=0&s_online=0&s_tag=&s_map=0&s_schid=0&s_rztype=&s_grid=0&s_elite=0&s_showtype=0&s_orderby=0&amp;page=1217'>末页</a>&nbsp;&nbsp;<span>页次：1/1217&nbsp;&nbsp;记录：24325</span></div>
+       
+       
+      
+    </div>
+  </div>
+  
+  <div class="oe_right">
+    <div class="oe_userda">
+                  <a href=""><img src="/data/attachment/upload/201805/19/70a495d91753ca00.jpg" /></a>
+          </div>
+  </div>
+  <!--//oe_right End -->
+  
+  <div class="clear"></div>
+</div>
+
+<script src="/tpl/templets/v5/js/user.js"></script> 
+<div class="oe_footer">
+  <div class="oe_footercon">
+    <div class="left">
+      <div class="oe_fnav">
+         
+                <a href="/index.php?c=safety">防骗中心</a><i></i>
+        
+                <a href="javascript:;" f="pop2_jdlogin" rel='nofollow'>留言反馈</a><i></i>
+                
+        <a href="/" rel='nofollow'>返回首页</a>
+                <!--百度统计代码 add by venus, have three page-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a4ad8145323572dac1b2fa2473ad3e8e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+              </div>
+      <div class="oe_footerinfo">
+        联系邮箱：kongjie@kongjie.com
+      </div>
+    </div>
+    <div class="right">
+      <p>
+	Copyright &copy; 2012-2018
+</p>
+<p>
+	<br />
+</p>
+                </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<script type="text/javascript" src="/tpl/templets/v5/js/popwin.js"></script>
+<div id="moquu_wxin" class="moquu_wxin">
+  <a href="javascript:;" rel='nofollow'><img class="oe_moq_wei" src="/tpl/templets/v5/images/wei.png" />
+  <div class="moquu_wxinh">
+    <dl>
+      <dt><img src="/data/attachment/upload/201705/20/7dcd2828e01685e5.jpg" width="200px" /></dt>
+      <dd>
+        <p><img src="/tpl/templets/v5/images/wei_ico.jpg" />微信</p>
+        <span>扫描二维码访问微信服务</span> </dd>
+    </dl>
+  </div>
+  </a>
+</div>
+
+<div id="moquu_wshare" class="moquu_wshare">
+  <a href="javascript:;"  rel='nofollow'><img class="oe_moq_wei" src="/tpl/templets/v5/images/wei.png" />
+  <div class="moquu_wshareh">
+    <dl>
+      <dt><img src="/data/attachment/upload/201705/20/e98109d451c61e73.png" width="200px" /></dt>
+      <dd>
+        <p><img src="/tpl/templets/v5/images/w_mobile.png" /> 手机端</p>
+        <span>扫描二维码访问手机端</span>
+	  </dd>
+    </dl>
+  </div>
+  </a>
+</div>
+<a id="moquu_top" href="javascript:;"></a> 
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+    jQuery(".drop").slide({ type:"menu", titCell:".down", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,defaultPlay:false,returnDefault:true});
+    $('.addcurrent').hover(
+      function(){
+       $(this).addClass('current')
+      },
+      function(){
+       $(this).removeClass('current')
+      }
+    );
+});
+</script>
+
+
+
+
+<div class="oe_shade" style="display:none;">
+  <div class="oe_tipsbox">
+    <span class="close"><i></i></span>
+    <div class="bd">
+      <h3>更多交友互动  尽在手机版</h3>
+      <div class="ma">
+        <h4>加 angle 为好友 </h4>
+        <img src="/data/attachment/upload/201705/20/7dcd2828e01685e5.jpg" width="200px" />
+        <p>扫二维码  进入手机版</p>
+      </div>
+    </div>
+    <div class="hd">
+      <img src="/data/attachment/upload/201704/26/2a4975bca5a656c9.png" alt="" />
+    </div>
+  </div>
+</div>
+</body>
+</html>

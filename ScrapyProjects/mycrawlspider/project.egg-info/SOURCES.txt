@@ -1,0 +1,16 @@
+setup.py
+mycrawlspider/__init__.py
+mycrawlspider/items.py
+mycrawlspider/middlewares.py
+mycrawlspider/pipelines.py
+mycrawlspider/settings.py
+mycrawlspider/spiders/__init__.py
+mycrawlspider/spiders/lagou.py
+mycrawlspider/spiders/toscrape.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+utils/__init__.py
+utils/bshead.py

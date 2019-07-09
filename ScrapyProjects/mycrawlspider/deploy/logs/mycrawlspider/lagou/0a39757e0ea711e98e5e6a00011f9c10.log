@@ -1,0 +1,620 @@
+2019-01-02 23:57:01 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: mycrawlspider)
+2019-01-02 23:57:01 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.4 (v3.6.4:d48ecebad5, Dec 18 2017, 21:07:28) - [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0j  20 Nov 2018), cryptography 2.4.2, Platform Darwin-17.7.0-x86_64-i386-64bit
+2019-01-02 23:57:01 [scrapy.crawler] INFO: Overridden settings: {'AUTOTHROTTLE_ENABLED': True, 'BOT_NAME': 'mycrawlspider', 'DOWNLOAD_DELAY': 2, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'logs/mycrawlspider/lagou/0a39757e0ea711e98e5e6a00011f9c10.log', 'NEWSPIDER_MODULE': 'mycrawlspider.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['mycrawlspider.spiders']}
+2019-01-02 23:57:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2019-01-02 23:57:01 [lagou] INFO: Reading start URLs from redis key 'lagou:start_urls' (batch size: 16, encoding: utf-8
+2019-01-02 23:57:01 [py.warnings] WARNING: /Users/zhouguangyou/pyEnv/wh_1805_spider_env/lib/python3.6/site-packages/scrapy/utils/deprecate.py:156: ScrapyDeprecationWarning: `scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware` class is deprecated, use `scrapy.downloadermiddlewares.useragent.UserAgentMiddleware` instead
+  ScrapyDeprecationWarning)
+
+2019-01-02 23:57:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'mycrawlspider.middlewares.RotateUserAgentMiddleware',
+ 'mycrawlspider.middlewares.MycrawlspiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-02 23:57:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-02 23:57:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_redis.pipelines.RedisPipeline']
+2019-01-02 23:57:01 [scrapy.core.engine] INFO: Spider opened
+2019-01-02 23:57:01 [lagou] DEBUG: Resuming crawl (868 requests scheduled)
+2019-01-02 23:57:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-02 23:57:01 [lagou] INFO: Spider opened: lagou
+2019-01-02 23:57:01 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-01-02 23:57:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5467884.html> (referer: https://www.lagou.com/zhaopin/idc/)
+2019-01-02 23:57:02 [scrapy_redis.dupefilter] DEBUG: Filtered duplicate request <GET https://www.lagou.com/jobs/4296310.html> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-01-02 23:57:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5467884.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 2, 607191)],
+ 'job_city': ['杭州 '],
+ 'salary': ['6k-9k '],
+ 'title': ['idc运维'],
+ 'url': ['https://www.lagou.com/jobs/5467884.html'],
+ 'url_finger_print': ['c9e647e30974febbc8294450a55afebd'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-02 23:57:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3104152.html> (referer: https://www.lagou.com/zhaopin/U3D/)
+2019-01-02 23:57:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3104152.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 6, 649871)],
+ 'job_city': ['北京 '],
+ 'salary': ['10k-20k '],
+ 'title': ['U3D工程师'],
+ 'url': ['https://www.lagou.com/jobs/3104152.html'],
+ 'url_finger_print': ['a597c1aeb5195b8da77f33f969029b07'],
+ 'work_years': ['经验3-5年 /']}
+2019-01-02 23:57:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4043170.html> (referer: https://www.lagou.com/zhaopin/CFO/)
+2019-01-02 23:57:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4043170.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 8, 449767)],
+ 'job_city': ['杭州 '],
+ 'salary': ['20k-35k '],
+ 'title': ['财务总监'],
+ 'url': ['https://www.lagou.com/jobs/4043170.html'],
+ 'url_finger_print': ['0960f74fa62a5d0bbd4a3457a88e9e7a'],
+ 'work_years': ['经验5-10年 /']}
+2019-01-02 23:57:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5248944.html> (referer: https://www.lagou.com/zhaopin/etl/)
+2019-01-02 23:57:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5248944.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 11, 218214)],
+ 'job_city': ['北京 '],
+ 'salary': ['8k-14k '],
+ 'title': ['ETL工程师'],
+ 'url': ['https://www.lagou.com/jobs/5248944.html'],
+ 'url_finger_print': ['b12f79ea9a4d8d334172d9c9f9503d2c'],
+ 'work_years': ['经验3-5年 /']}
+2019-01-02 23:57:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5308050.html> (referer: https://www.lagou.com/zhaopin/CFO/)
+2019-01-02 23:57:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5308050.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 13, 672121)],
+ 'job_city': ['长沙 '],
+ 'salary': ['8k-12k '],
+ 'title': ['财务总监'],
+ 'url': ['https://www.lagou.com/jobs/5308050.html'],
+ 'url_finger_print': ['da2fb6e1928f6c950b927459b261eeb1'],
+ 'work_years': ['经验5-10年 /']}
+2019-01-02 23:57:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5333785.html>
+2019-01-02 23:57:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5401269.html>
+2019-01-02 23:57:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5418325.html>
+2019-01-02 23:57:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5463988.html>
+2019-01-02 23:57:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4179375.html>
+2019-01-02 23:57:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5186979.html>
+2019-01-02 23:57:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4363388.html>
+2019-01-02 23:57:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5007580.html>
+2019-01-02 23:57:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5372749.html>
+2019-01-02 23:57:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5461500.html>
+2019-01-02 23:57:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/SEM1/>
+2019-01-02 23:57:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/SEO1/> (referer: https://www.lagou.com/)
+2019-01-02 23:57:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3339160.html> (referer: https://www.lagou.com/zhaopin/iOS/)
+2019-01-02 23:57:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3339160.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 44, 140203)],
+ 'job_city': ['北京 '],
+ 'salary': ['20k-35k '],
+ 'title': ['iOS开发工程师'],
+ 'url': ['https://www.lagou.com/jobs/3339160.html'],
+ 'url_finger_print': ['143ff4ff01e92f219df0a450fdadeae6'],
+ 'work_years': ['经验3-5年 /']}
+2019-01-02 23:57:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3459754.html> (referer: https://www.lagou.com/zhaopin/PHP/)
+2019-01-02 23:57:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3459754.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 47, 697349)],
+ 'job_city': ['广州 '],
+ 'salary': ['6k-12k '],
+ 'title': ['PHP开发工程师'],
+ 'url': ['https://www.lagou.com/jobs/3459754.html'],
+ 'url_finger_print': ['a6212abc9c1e59f67216ac413f91d959'],
+ 'work_years': ['经验不限 /']}
+2019-01-02 23:57:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3618577.html> (referer: https://www.lagou.com/zhaopin/idc/)
+2019-01-02 23:57:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3618577.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 50, 102328)],
+ 'job_city': ['北京 '],
+ 'salary': ['4k-6k '],
+ 'title': ['IDC运维工程师'],
+ 'url': ['https://www.lagou.com/jobs/3618577.html'],
+ 'url_finger_print': ['d686a414ae4c21a20e7f6c2c7d5d8e3f'],
+ 'work_years': ['经验不限 /']}
+2019-01-02 23:57:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3691407.html> (referer: https://www.lagou.com/zhaopin/C%23/)
+2019-01-02 23:57:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3691407.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 52, 614507)],
+ 'job_city': ['上海 '],
+ 'salary': ['12k-24k '],
+ 'title': ['C#开发工程师'],
+ 'url': ['https://www.lagou.com/jobs/3691407.html'],
+ 'url_finger_print': ['e0e6bb3138e27a4ff84bea787dd5e5eb'],
+ 'work_years': ['经验3-5年 /']}
+2019-01-02 23:57:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> (referer: https://www.lagou.com/zhaopin/COO/)
+2019-01-02 23:57:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 55, 289637)],
+ 'url': ['https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38'],
+ 'url_finger_print': ['edb1150d8272f9a82b8357a06b3a7c47']}
+2019-01-02 23:57:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3781929.html> (referer: https://www.lagou.com/zhaopin/iOS/)
+2019-01-02 23:57:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3781929.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 57, 58, 361038)],
+ 'job_city': ['上海 '],
+ 'salary': ['10k-20k '],
+ 'title': ['iOS开发工程师'],
+ 'url': ['https://www.lagou.com/jobs/3781929.html'],
+ 'url_finger_print': ['61392e99c8bef847dd1c4aaf67d41b93'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-02 23:58:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3953289.html> (referer: https://www.lagou.com/zhaopin/PHP/)
+2019-01-02 23:58:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3953289.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 58, 1, 200192)],
+ 'job_city': ['北京 '],
+ 'salary': ['10k-15k '],
+ 'title': ['PHP开发工程师'],
+ 'url': ['https://www.lagou.com/jobs/3953289.html'],
+ 'url_finger_print': ['f538d05ce19bec8dad62e0c70fc973ba'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-02 23:58:01 [scrapy.extensions.logstats] INFO: Crawled 13 pages (at 13 pages/min), scraped 12 items (at 12 items/min)
+2019-01-02 23:58:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4192618.html>
+2019-01-02 23:58:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4258888.html>
+2019-01-02 23:58:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4296310.html>
+2019-01-02 23:58:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4627966.html>
+2019-01-02 23:58:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4665092.html>
+2019-01-02 23:58:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4999408.html>
+2019-01-02 23:58:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5015778.html>
+2019-01-02 23:58:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5335350.html>
+2019-01-02 23:58:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5346002.html>
+2019-01-02 23:58:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5423320.html>
+2019-01-02 23:58:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5175390.html>
+2019-01-02 23:58:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5252395.html>
+2019-01-02 23:58:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4780413.html>
+2019-01-02 23:58:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5461345.html>
+2019-01-02 23:58:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5385138.html>
+2019-01-02 23:58:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5432596.html>
+2019-01-02 23:58:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5443652.html>
+2019-01-02 23:58:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/.NET/>
+2019-01-02 23:58:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/HRBP/>
+2019-01-02 23:58:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Perl/>
+2019-01-02 23:58:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Ruby/>
+2019-01-02 23:58:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/hive/> (referer: https://www.lagou.com/)
+2019-01-02 23:58:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4204132.html> (referer: https://www.lagou.com/zhaopin/shujuwajue/)
+2019-01-02 23:58:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4204132.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 58, 55, 795280)],
+ 'job_city': ['成都 '],
+ 'salary': ['15k-22k '],
+ 'title': ['数据挖掘'],
+ 'url': ['https://www.lagou.com/jobs/4204132.html'],
+ 'url_finger_print': ['7b542b3db9e35049889cd7bed69cfcde'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-02 23:58:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5398713.html> (referer: https://www.lagou.com/zhaopin/shujuwajue/)
+2019-01-02 23:58:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5398713.html>
+{'crawl_time': [datetime.datetime(2019, 1, 2, 23, 58, 58, 529838)],
+ 'job_city': ['深圳 '],
+ 'salary': ['15k-25k '],
+ 'title': ['数据挖掘'],
+ 'url': ['https://www.lagou.com/jobs/5398713.html'],
+ 'url_finger_print': ['f1b84f4cc5eff242b063f6518a10d5fc'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-02 23:59:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3056118.html>
+2019-01-02 23:59:01 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 3 pages/min), scraped 14 items (at 2 items/min)
+2019-01-02 23:59:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3477802.html>
+2019-01-02 23:59:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4215878.html>
+2019-01-02 23:59:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4390478.html>
+2019-01-02 23:59:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5196319.html>
+2019-01-02 23:59:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5253977.html>
+2019-01-02 23:59:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5403584.html>
+2019-01-02 23:59:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5467810.html>
+2019-01-02 23:59:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Flash/>
+2019-01-02 23:59:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/HTML5/>
+2019-01-02 23:59:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/MySQL/>
+2019-01-02 23:59:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shell/>
+2019-01-02 23:59:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/2761514.html>
+2019-01-02 23:59:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4792365.html>
+2019-01-02 23:59:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4847227.html>
+2019-01-02 23:59:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5039942.html>
+2019-01-02 23:59:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5380099.html>
+2019-01-02 23:59:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/>
+2019-01-02 23:59:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chuna/>
+2019-01-02 23:59:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/fawu2/>
+2019-01-02 23:59:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jizhe/>
+2019-01-02 23:59:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/lvshi/>
+2019-01-02 23:59:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/wenmi/> (referer: https://www.lagou.com/)
+2019-01-02 23:59:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/zhuli/> (referer: https://www.lagou.com/)
+2019-01-02 23:59:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/youxiU3D/> (referer: https://www.lagou.com/)
+2019-01-02 23:59:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4130852.html>
+2019-01-02 23:59:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4332841.html>
+2019-01-03 00:00:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4915902.html>
+2019-01-03 00:00:01 [scrapy.extensions.logstats] INFO: Crawled 19 pages (at 3 pages/min), scraped 14 items (at 0 items/min)
+2019-01-03 00:00:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5032554.html>
+2019-01-03 00:00:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Delphi/>
+2019-01-03 00:00:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Hadoop/>
+2019-01-03 00:00:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Oracle/>
+2019-01-03 00:00:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Python/>
+2019-01-03 00:00:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/bianji/>
+2019-01-03 00:00:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/caiwu1/>
+2019-01-03 00:00:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/kuaiji/>
+2019-01-03 00:00:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shenji/>
+2019-01-03 00:00:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shuiwu/>
+2019-01-03 00:00:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/2919295.html>
+2019-01-03 00:00:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4859587.html>
+2019-01-03 00:00:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5221944.html>
+2019-01-03 00:00:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5280232.html>
+2019-01-03 00:00:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5393718.html>
+2019-01-03 00:00:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5413032.html>
+2019-01-03 00:00:43 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5453980.html>
+2019-01-03 00:00:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5467628.html>
+2019-01-03 00:00:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4758776.html>
+2019-01-03 00:00:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5408389.html>
+2019-01-03 00:00:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5462471.html>
+2019-01-03 00:00:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/4170912.html> (referer: https://www.lagou.com/zhaopin/zhuli/)
+2019-01-03 00:00:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/4170912.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 0, 55, 884621)],
+ 'job_city': ['成都 '],
+ 'salary': ['3k-4k '],
+ 'title': ['文员/助理'],
+ 'url': ['https://www.lagou.com/jobs/4170912.html'],
+ 'url_finger_print': ['34411697f73529f2fba66c4d18e5ac0b'],
+ 'work_years': ['经验不限 /']}
+2019-01-03 00:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5466327.html> (referer: https://www.lagou.com/zhaopin/wenmi/)
+2019-01-03 00:00:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5466327.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 0, 59, 685818)],
+ 'job_city': ['珠海 '],
+ 'salary': ['4k-6k '],
+ 'title': ['助理/文秘'],
+ 'url': ['https://www.lagou.com/jobs/5466327.html'],
+ 'url_finger_print': ['e501aa62b10c0372ad121faa4400f43c'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-03 00:01:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5294358.html> (referer: https://www.lagou.com/zhaopin/zhuli/)
+2019-01-03 00:01:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5294358.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 1, 1, 168861)],
+ 'job_city': ['杭州 '],
+ 'salary': ['5k-8k '],
+ 'title': ['调香师助理'],
+ 'url': ['https://www.lagou.com/jobs/5294358.html'],
+ 'url_finger_print': ['80adcd63f29821ab8d5dce48167f0055'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-03 00:01:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 3 pages/min), scraped 17 items (at 3 items/min)
+2019-01-03 00:01:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3524356.html>
+2019-01-03 00:01:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5200685.html>
+2019-01-03 00:01:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5417945.html>
+2019-01-03 00:01:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5418015.html>
+2019-01-03 00:01:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5465048.html>
+2019-01-03 00:01:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/HRDHRM/>
+2019-01-03 00:01:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jiesuan/>
+2019-01-03 00:01:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/qiantai/>
+2019-01-03 00:01:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhaopin/>
+2019-01-03 00:01:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhuanli/>
+2019-01-03 00:01:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhubian/>
+2019-01-03 00:01:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zongzhu/>
+2019-01-03 00:01:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4041582.html>
+2019-01-03 00:01:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5129067.html>
+2019-01-03 00:01:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5133387.html>
+2019-01-03 00:01:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5335826.html>
+2019-01-03 00:01:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5438560.html>
+2019-01-03 00:01:43 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5462247.html>
+2019-01-03 00:01:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C/3/>
+2019-01-03 00:01:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/MongoDB/>
+2019-01-03 00:01:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Node.js/>
+2019-01-03 00:01:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/fengkong/>
+2019-01-03 00:01:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yingjian/>
+2019-01-03 00:01:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4742945.html>
+2019-01-03 00:02:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:02:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5236653.html>
+2019-01-03 00:02:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5466471.html>
+2019-01-03 00:02:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5468424.html>
+2019-01-03 00:02:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiflash/>
+2019-01-03 00:02:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4247433.html>
+2019-01-03 00:02:15 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5044023.html>
+2019-01-03 00:02:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5272797.html>
+2019-01-03 00:02:20 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5291164.html>
+2019-01-03 00:02:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5321844.html>
+2019-01-03 00:02:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C/30/>
+2019-01-03 00:02:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/HR/3/>
+2019-01-03 00:02:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/f5/3/>
+2019-01-03 00:02:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/f5/5/>
+2019-01-03 00:02:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/go/3/>
+2019-01-03 00:02:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/dbaqita/>
+2019-01-03 00:02:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ITzhichi/>
+2019-01-03 00:02:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xingzheng1/>
+2019-01-03 00:02:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4335720.html>
+2019-01-03 00:02:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4988241.html>
+2019-01-03 00:02:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5273649.html>
+2019-01-03 00:02:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5390711.html>
+2019-01-03 00:02:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5468475.html>
+2019-01-03 00:02:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/armkaifa/>
+2019-01-03 00:02:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/dspkaifa/>
+2019-01-03 00:03:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/renshiHR/>
+2019-01-03 00:03:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:03:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3502520.html>
+2019-01-03 00:03:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4358773.html>
+2019-01-03 00:03:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5345437.html>
+2019-01-03 00:03:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5358044.html>
+2019-01-03 00:03:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C++/3/>
+2019-01-03 00:03:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/CFO/3/>
+2019-01-03 00:03:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/COO/3/>
+2019-01-03 00:03:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/COO/5/>
+2019-01-03 00:03:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/CTO/3/>
+2019-01-03 00:03:25 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/HR/30/>
+2019-01-03 00:03:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/PHP/3/>
+2019-01-03 00:03:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/U3D/3/>
+2019-01-03 00:03:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/asp/3/>
+2019-01-03 00:03:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/asp/6/>
+2019-01-03 00:03:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/cdn/3/>
+2019-01-03 00:03:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/cdn/6/>
+2019-01-03 00:03:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceo/3/>
+2019-01-03 00:03:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceo/8/>
+2019-01-03 00:03:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/etl/3/>
+2019-01-03 00:03:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/go/30/>
+2019-01-03 00:03:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/iOS/3/>
+2019-01-03 00:03:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/idc/3/>
+2019-01-03 00:04:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/idc/6/>
+2019-01-03 00:04:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:04:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/COCOS2D-X/>
+2019-01-03 00:04:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/SQLServer/>
+2019-01-03 00:04:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/danpianji/>
+2019-01-03 00:04:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/fuzhubian/>
+2019-01-03 00:04:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jiagoushi/>
+2019-01-03 00:04:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pcbgongyi/>
+2019-01-03 00:04:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/qianrushi/>
+2019-01-03 00:04:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/webanquan/>
+2019-01-03 00:04:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zidonghua/>
+2019-01-03 00:04:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiaoshouvp/>
+2019-01-03 00:04:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/2762432.html>
+2019-01-03 00:04:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4788830.html>
+2019-01-03 00:04:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5002829.html>
+2019-01-03 00:04:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5239892.html>
+2019-01-03 00:04:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5407061.html>
+2019-01-03 00:04:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/fpgakaifa/>
+2019-01-03 00:04:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/COCOS2D-X1/>
+2019-01-03 00:04:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/rechuandao/>
+2019-01-03 00:04:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yuanhuashi/>
+2019-01-03 00:04:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5272762.html>
+2019-01-03 00:04:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C%23/3/>
+2019-01-03 00:04:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C++/30/>
+2019-01-03 00:04:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/CFO/12/>
+2019-01-03 00:05:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/CTO/12/>
+2019-01-03 00:05:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:05:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Java/3/>
+2019-01-03 00:05:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/PHP/30/>
+2019-01-03 00:05:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/SEO1/3/>
+2019-01-03 00:05:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/U3D/30/>
+2019-01-03 00:05:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/etl/16/>
+2019-01-03 00:05:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/hive/3/>
+2019-01-03 00:05:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/iOS/30/>
+2019-01-03 00:05:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3611358.html>
+2019-01-03 00:05:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3699272.html>
+2019-01-03 00:05:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/JavaScript/>
+2019-01-03 00:05:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/webqianduan/>
+2019-01-03 00:05:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5132640.html>
+2019-01-03 00:05:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5409714.html>
+2019-01-03 00:05:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceshiqita/>
+2019-01-03 00:05:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/mujusheji/>
+2019-01-03 00:05:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/UIshejishi/>
+2019-01-03 00:05:43 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/C%23/30/>
+2019-01-03 00:05:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Java/30/>
+2019-01-03 00:05:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/SEO1/30/>
+2019-01-03 00:05:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/hive/30/>
+2019-01-03 00:05:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wenmi/3/>
+2019-01-03 00:05:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhuli/3/>
+2019-01-03 00:05:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/baiheceshi/>
+2019-01-03 00:05:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceshikaifa/>
+2019-01-03 00:05:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/heiheceshi/>
+2019-01-03 00:06:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/huiheceshi/>
+2019-01-03 00:06:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:06:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jiqishijue/>
+2019-01-03 00:06:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/kefujingli/>
+2019-01-03 00:06:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/kehujingli/>
+2019-01-03 00:06:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/taobaokefu/>
+2019-01-03 00:06:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wenancehua/>
+2019-01-03 00:06:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxicehua/>
+2019-01-03 00:06:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiceshi/>
+2019-01-03 00:06:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxijuese/>
+2019-01-03 00:06:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxitiyan/>
+2019-01-03 00:06:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiwenan/>
+2019-01-03 00:06:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunweiqita/>
+2019-01-03 00:06:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3635209.html>
+2019-01-03 00:06:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxi/>
+2019-01-03 00:06:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5094933.html>
+2019-01-03 00:06:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5436710.html>
+2019-01-03 00:06:41 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/APPshejishi/>
+2019-01-03 00:06:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/bingdufenxi/>
+2019-01-03 00:06:43 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/cehuajingli/>
+2019-01-03 00:06:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/dianlusheji/>
+2019-01-03 00:06:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jiaohusheji/>
+2019-01-03 00:06:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jishujingli/>
+2019-01-03 00:06:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/juqingsheji/>
+2019-01-03 00:06:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/meijieguwen/>
+2019-01-03 00:06:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/meijiehezuo/>
+2019-01-03 00:06:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pinpaicehua/>
+2019-01-03 00:07:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pinpaihezuo/>
+2019-01-03 00:07:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:07:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/qudongkaifa/>
+2019-01-03 00:07:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shouhoukefu/>
+2019-01-03 00:07:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shoujiceshi/>
+2019-01-03 00:07:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shujucangku/>
+2019-01-03 00:07:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxibianji/>
+2019-01-03 00:07:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxijiaose/>
+2019-01-03 00:07:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxitexiao/>
+2019-01-03 00:07:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxizhuobo/>
+2019-01-03 00:07:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yuyinshibie/>
+2019-01-03 00:07:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/kefu/>
+2019-01-03 00:07:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunwei/>
+2019-01-03 00:07:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/html51/3/>
+2019-01-03 00:07:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wenmi/30/>
+2019-01-03 00:07:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhuli/30/>
+2019-01-03 00:07:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceshijingli2/>
+2019-01-03 00:07:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chanpinzhuli/>
+2019-01-03 00:07:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/kefuzongjian/>
+2019-01-03 00:07:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/meishuzhidao/>
+2019-01-03 00:07:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/peixunjingli/>
+2019-01-03 00:07:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/qitaxiaoshou/>
+2019-01-03 00:07:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/quyuzongjian/>
+2019-01-03 00:07:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/renliziyuan1/>
+2019-01-03 00:07:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shujuyunying/>
+2019-01-03 00:07:58 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/sousuosuanfa/>
+2019-01-03 00:08:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/tuxiangchuli/>
+2019-01-03 00:08:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:08:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiangmuzhuli/>
+2019-01-03 00:08:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xitonganquan/>
+2019-01-03 00:08:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxidonghua/>
+2019-01-03 00:08:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxidongzuo/>
+2019-01-03 00:08:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxijiemian/>
+2019-01-03 00:08:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youximeigong/>
+2019-01-03 00:08:19 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxipeilian/>
+2019-01-03 00:08:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiyuanhua/>
+2019-01-03 00:08:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiyunying/>
+2019-01-03 00:08:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunweijingli/>
+2019-01-03 00:08:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5151490.html>
+2019-01-03 00:08:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5282389.html>
+2019-01-03 00:08:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/ceshizongjian/>
+2019-01-03 00:08:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/gongnengceshi/>
+2019-01-03 00:08:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaowenan/>
+2019-01-03 00:08:41 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/haiwaiyunying/>
+2019-01-03 00:08:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/huodongcehua1/>
+2019-01-03 00:08:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jishuzongjian/>
+2019-01-03 00:08:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/meijiejingli1/>
+2019-01-03 00:08:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/meijietoufang/>
+2019-01-03 00:08:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/neirongbianji/>
+2019-01-03 00:08:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pinleiyunying/>
+2019-01-03 00:08:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shangwuqudao2/>
+2019-01-03 00:09:01 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shejizongjian/>
+2019-01-03 00:09:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:09:04 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shouqianzixun/>
+2019-01-03 00:09:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/tuanduijingli/>
+2019-01-03 00:09:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/tuxiangshibie/>
+2019-01-03 00:09:11 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wangluoanquan/>
+2019-01-03 00:09:14 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiangmujingli/>
+2019-01-03 00:09:16 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xingnengceshi/>
+2019-01-03 00:09:18 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xitongjicheng/>
+2019-01-03 00:09:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yeyoutuiguang/>
+2019-01-03 00:09:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yingjianceshi/>
+2019-01-03 00:09:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yonghuyunying/>
+2019-01-03 00:09:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxidongxiao/>
+2019-01-03 00:09:32 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxidongzuo1/>
+2019-01-03 00:09:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxituiguang/>
+2019-01-03 00:09:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiyunying1/>
+2019-01-03 00:09:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunyingjingli/>
+2019-01-03 00:09:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/bigongchengshi/>
+2019-01-03 00:09:43 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5336193.html>
+2019-01-03 00:09:46 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3574363.html>
+2019-01-03 00:09:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5088084.html>
+2019-01-03 00:09:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5467995.html>
+2019-01-03 00:09:51 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Android/3/>
+2019-01-03 00:09:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/html51/30/>
+2019-01-03 00:09:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/H5youxikaifa/>
+2019-01-03 00:09:58 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/anquanzhuanjia/>
+2019-01-03 00:10:00 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chanpinjingli1/>
+2019-01-03 00:10:01 [scrapy.extensions.logstats] INFO: Crawled 22 pages (at 0 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:10:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chanpinyunying/>
+2019-01-03 00:10:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chengshijingli/>
+2019-01-03 00:10:07 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/dianjingzhuchi/>
+2019-01-03 00:10:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaozhizuo/>
+2019-01-03 00:10:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/huodongyunying/>
+2019-01-03 00:10:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/meijiezongjian/> (referer: https://www.lagou.com/)
+2019-01-03 00:10:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/neirongyunying/> (referer: https://www.lagou.com/)
+2019-01-03 00:10:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/qudaotuiguang1/> (referer: https://www.lagou.com/)
+2019-01-03 00:10:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shangwutuozhan/>
+2019-01-03 00:10:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shangwuzhuguan/>
+2019-01-03 00:10:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shichangcehua1/>
+2019-01-03 00:10:30 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shichangguwen1/>
+2019-01-03 00:10:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiaoshouguwen1/>
+2019-01-03 00:10:34 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxichangjing/>
+2019-01-03 00:10:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yuangongguanxi/>
+2019-01-03 00:10:39 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunweizongjian/>
+2019-01-03 00:10:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/zhengfuguanxi1/>
+2019-01-03 00:10:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3566485.html>
+2019-01-03 00:10:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Flashshejishi/>
+2019-01-03 00:10:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/baoxianxiaoshou/>
+2019-01-03 00:10:53 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chanpinzongjian/>
+2019-01-03 00:10:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaodingwei/>
+2019-01-03 00:10:58 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3865931.html>
+2019-01-03 00:10:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4577432.html>
+2019-01-03 00:11:01 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 3 pages/min), scraped 17 items (at 0 items/min)
+2019-01-03 00:11:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4737384.html>
+2019-01-03 00:11:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5153233.html>
+2019-01-03 00:11:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5414512.html>
+2019-01-03 00:11:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5423594.html>
+2019-01-03 00:11:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5446404.html>
+2019-01-03 00:11:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/3700946.html> (referer: https://www.lagou.com/zhaopin/qudaotuiguang1/)
+2019-01-03 00:11:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/3700946.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 11, 16, 937312)],
+ 'job_city': ['武汉 '],
+ 'salary': ['4k-5k '],
+ 'title': ['直通车推广'],
+ 'url': ['https://www.lagou.com/jobs/3700946.html'],
+ 'url_finger_print': ['7013cfb1948335f0a76f0c9900b6466d'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-03 00:11:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5325755.html> (referer: https://www.lagou.com/zhaopin/meijiezongjian/)
+2019-01-03 00:11:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5325755.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 11, 18, 761688)],
+ 'job_city': ['武汉 '],
+ 'salary': ['2k-3k '],
+ 'title': ['媒介实习生'],
+ 'url': ['https://www.lagou.com/jobs/5325755.html'],
+ 'url_finger_print': ['6ec3a0942675d2f266e0876699158c3d'],
+ 'work_years': ['经验1年以下 /']}
+2019-01-03 00:11:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/2705170.html> (referer: https://www.lagou.com/zhaopin/neirongyunying/)
+2019-01-03 00:11:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/2705170.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 11, 21, 706054)],
+ 'job_city': ['武汉 '],
+ 'salary': ['5k-10k '],
+ 'title': ['内容运营经理'],
+ 'url': ['https://www.lagou.com/jobs/2705170.html'],
+ 'url_finger_print': ['ef34782008f9b79824d0800735e735f7'],
+ 'work_years': ['经验1-3年 /']}
+2019-01-03 00:11:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4438001.html>
+2019-01-03 00:11:26 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5415236.html>
+2019-01-03 00:11:28 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5356375.html>
+2019-01-03 00:11:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5100980.html>
+2019-01-03 00:11:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3917815.html>
+2019-01-03 00:11:36 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4431127.html>
+2019-01-03 00:11:38 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5174617.html>
+2019-01-03 00:11:41 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaotoufang/>
+2019-01-03 00:11:44 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaoxietiao/>
+2019-01-03 00:11:47 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/haiwaishichang1/>
+2019-01-03 00:11:49 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jingzhuntuijian/>
+2019-01-03 00:11:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pinpaigongguan1/>
+2019-01-03 00:11:54 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/pinpaizhuanyuan/>
+2019-01-03 00:11:56 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shangjiayunying/>
+2019-01-03 00:11:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shouyoutuiguang/>
+2019-01-03 00:12:01 [scrapy.extensions.logstats] INFO: Crawled 28 pages (at 3 pages/min), scraped 20 items (at 3 items/min)
+2019-01-03 00:12:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wangdianyunying/>
+2019-01-03 00:12:03 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wangluotuiguang/>
+2019-01-03 00:12:06 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiangmuzongjian/>
+2019-01-03 00:12:09 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/xiaoshoujingli1/>
+2019-01-03 00:12:12 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxichangjing1/>
+2019-01-03 00:12:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiyouxicehua/>
+2019-01-03 00:12:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/youxiyouxiceshi/> (referer: https://www.lagou.com/)
+2019-01-03 00:12:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/zhaopin/yunyingzongjian/> (referer: https://www.lagou.com/)
+2019-01-03 00:12:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.lagou.com/jobs/5458734.html> (referer: https://www.lagou.com/zhaopin/shujuwajue/)
+2019-01-03 00:12:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.lagou.com/jobs/5458734.html>
+{'crawl_time': [datetime.datetime(2019, 1, 3, 0, 12, 20, 225013)],
+ 'job_city': ['深圳 '],
+ 'salary': ['12k-20k '],
+ 'title': ['数据分析/数据挖掘师'],
+ 'url': ['https://www.lagou.com/jobs/5458734.html'],
+ 'url_finger_print': ['063d1558fd6ec6d2102506f56969ff06'],
+ 'work_years': ['经验3-5年 /']}
+2019-01-03 00:12:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/Android/30/>
+2019-01-03 00:12:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/youxiU3D/3/>
+2019-01-03 00:12:27 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/jishuhehuoren/>
+2019-01-03 00:12:29 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shujufenxishi/>
+2019-01-03 00:12:31 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/chuangyizongjian/>
+2019-01-03 00:12:33 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/dianjingjiangshi/>
+2019-01-03 00:12:35 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaochuangyi/>
+2019-01-03 00:12:37 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/guanggaoxiaoshou/>
+2019-01-03 00:12:40 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/shangwuzhuanyuan/>
+2019-01-03 00:12:42 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/wangluoyingxiao1/>
+2019-01-03 00:12:45 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/zhaopin/yunyingzhuanyuan/>
+2019-01-03 00:12:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3400565.html>
+2019-01-03 00:12:50 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5258741.html>
+2019-01-03 00:12:52 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5417922.html>
+2019-01-03 00:12:55 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5170823.html>
+2019-01-03 00:12:57 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4821609.html>
+2019-01-03 00:12:59 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5334735.html>
+2019-01-03 00:13:01 [scrapy.extensions.logstats] INFO: Crawled 31 pages (at 3 pages/min), scraped 21 items (at 1 items/min)
+2019-01-03 00:13:02 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/5378352.html>
+2019-01-03 00:13:05 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/1927943.html>
+2019-01-03 00:13:08 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/2786937.html>
+2019-01-03 00:13:10 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/3202280.html>
+2019-01-03 00:13:13 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (302) to <GET https://passport.lagou.com/login/login.html?msg=validation&uStatus=2&clientIp=115.175.44.38> from <GET https://www.lagou.com/jobs/4761758.html>
